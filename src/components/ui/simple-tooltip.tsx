@@ -30,7 +30,7 @@ export function TooltipContent({
   return (
     <div
       className={cn(
-        "invisible inline-flex absolute w-96 bg-primary py-2 px-3 text-primary-foreground peer-hover:visible",
+        "invisible absolute inline-flex w-96 bg-primary px-3 py-2 text-primary-foreground peer-hover:visible",
         className
       )}
     >

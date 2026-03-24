@@ -266,9 +266,7 @@ export function generateExportCode(
       return `'${slug}': {\n${lines.join("\n")}\n},`
     }
     case "tailwind4": {
-      const lines = entries.map(
-        ([s, v]) => `  --color-${slug}-${s}: ${v};`
-      )
+      const lines = entries.map(([s, v]) => `  --color-${slug}-${s}: ${v};`)
       return `@theme {\n${lines.join("\n")}\n}`
     }
     case "css": {

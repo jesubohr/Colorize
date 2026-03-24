@@ -19,9 +19,7 @@ import {
 function isEditableTarget(target: EventTarget | null) {
   if (!(target instanceof HTMLElement)) return false
   if (target.isContentEditable) return true
-  return !!target.closest(
-    "input, textarea, select, [contenteditable='true']"
-  )
+  return !!target.closest("input, textarea, select, [contenteditable='true']")
 }
 
 export default function App() {
@@ -63,9 +61,7 @@ export default function App() {
             {/* Palette header */}
             <div className="flex items-start justify-between">
               <div>
-                <span className="text-sm text-muted-foreground">
-                  Palette 1
-                </span>
+                <span className="text-sm text-muted-foreground">Palette 1</span>
               </div>
               <Button variant="outline" size="sm">
                 <IconHeart className="size-3.5" />

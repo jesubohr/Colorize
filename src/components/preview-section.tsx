@@ -55,10 +55,7 @@ function GradientsTab({ scale }: { scale: ColorScale }) {
     <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
       {gradients.map((g) => (
         <div key={g.label} className="flex flex-col gap-2">
-          <div
-            className="h-32 rounded-xl"
-            style={{ background: g.css }}
-          />
+          <div className="h-32 rounded-xl" style={{ background: g.css }} />
           <span className="text-xs text-muted-foreground">{g.label}</span>
         </div>
       ))}
@@ -104,8 +101,7 @@ function ComponentsTab({ scale }: { scale: ColorScale }) {
               className="rounded-full px-2.5 py-0.5 text-xs font-medium"
               style={{
                 backgroundColor: scale[shade],
-                color:
-                  Number(shade) >= 400 ? "#fff" : scale["800"],
+                color: Number(shade) >= 400 ? "#fff" : scale["800"],
               }}
             >
               Shade {shade}
@@ -152,13 +148,19 @@ function ComponentsTab({ scale }: { scale: ColorScale }) {
       {/* Toggle */}
       <div className="flex flex-col gap-3 rounded-xl border bg-card p-6">
         <span className="text-sm font-medium">Progress</span>
-        <div className="h-2 rounded-full" style={{ backgroundColor: scale["100"] }}>
+        <div
+          className="h-2 rounded-full"
+          style={{ backgroundColor: scale["100"] }}
+        >
           <div
             className="h-full w-2/3 rounded-full transition-all"
             style={{ backgroundColor: scale["500"] }}
           />
         </div>
-        <div className="h-2 rounded-full" style={{ backgroundColor: scale["100"] }}>
+        <div
+          className="h-2 rounded-full"
+          style={{ backgroundColor: scale["100"] }}
+        >
           <div
             className="h-full w-1/3 rounded-full transition-all"
             style={{ backgroundColor: scale["400"] }}
@@ -202,12 +204,12 @@ function HeadingsTab({ scale }: { scale: ColorScale }) {
         quickly. Sphinx of black quartz, judge my vow.
       </p>
       <p className="text-base" style={{ color: scale["500"] }}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
       </p>
       <p className="text-sm" style={{ color: scale["400"] }}>
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-        nisi ut aliquip ex ea commodo consequat.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+        ut aliquip ex ea commodo consequat.
       </p>
     </div>
   )
@@ -227,7 +229,9 @@ function ShadcnTab({ scale }: { scale: ColorScale }) {
           </div>
           <div>
             <div className="font-medium">Card Title</div>
-            <div className="text-sm text-muted-foreground">Card description text</div>
+            <div className="text-sm text-muted-foreground">
+              Card description text
+            </div>
           </div>
         </div>
       </div>
@@ -254,7 +258,9 @@ function ShadcnTab({ scale }: { scale: ColorScale }) {
 
       {/* Table-like */}
       <div className="flex flex-col rounded-xl border bg-card">
-        <div className="border-b px-4 py-3 text-sm font-medium">Transactions</div>
+        <div className="border-b px-4 py-3 text-sm font-medium">
+          Transactions
+        </div>
         {[
           { name: "Payment", amount: "-$250.00" },
           { name: "Deposit", amount: "+$1,200.00" },
@@ -322,7 +328,7 @@ function ChartsTab({ scale }: { scale: ColorScale }) {
             strokeWidth="20"
             strokeDasharray="75 251"
             strokeDashoffset="0"
-            className="-rotate-90 origin-center"
+            className="origin-center -rotate-90"
           />
           <circle
             cx="50"
@@ -333,7 +339,7 @@ function ChartsTab({ scale }: { scale: ColorScale }) {
             strokeWidth="20"
             strokeDasharray="100 251"
             strokeDashoffset="-75"
-            className="-rotate-90 origin-center"
+            className="origin-center -rotate-90"
           />
           <circle
             cx="50"
@@ -344,7 +350,7 @@ function ChartsTab({ scale }: { scale: ColorScale }) {
             strokeWidth="20"
             strokeDasharray="76 251"
             strokeDashoffset="-175"
-            className="-rotate-90 origin-center"
+            className="origin-center -rotate-90"
           />
         </svg>
       </div>

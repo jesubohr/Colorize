@@ -14,7 +14,11 @@ interface SidebarProps {
   onRandomize: () => void
 }
 
-export function Sidebar({ baseColor, onColorChange, onRandomize }: SidebarProps) {
+export function Sidebar({
+  baseColor,
+  onColorChange,
+  onRandomize,
+}: SidebarProps) {
   return (
     <aside className="flex w-[360px] shrink-0 flex-col border-r bg-card">
       <div className="flex flex-col gap-6 p-6">
@@ -23,8 +27,8 @@ export function Sidebar({ baseColor, onColorChange, onRandomize }: SidebarProps)
             Tailwind CSS Color Generator
           </h1>
           <p className="mt-1 text-sm text-muted-foreground">
-            Create and visualize Tailwind colors on all sorts of components
-            and designs.
+            Create and visualize Tailwind colors on all sorts of components and
+            designs.
           </p>
         </div>
 

@@ -136,7 +136,7 @@ function HeroCard({ scale }: { scale: ColorScale }) {
       />
       <div className="relative">
         <h3
-          className="text-3xl font-bold leading-tight"
+          className="text-3xl leading-tight font-bold"
           style={{ color: scale["900"] }}
         >
           Track your
@@ -164,7 +164,7 @@ function FeatureCard({ scale }: { scale: ColorScale }) {
       />
       <div className="relative">
         <h3
-          className="text-3xl font-bold leading-tight"
+          className="text-3xl leading-tight font-bold"
           style={{ color: scale["800"] }}
         >
           Gain
@@ -190,7 +190,7 @@ function BlogCard({ scale }: { scale: ColorScale }) {
             style={{ backgroundColor: scale[i === 0 ? "200" : "300"] }}
           />
           <div className="flex flex-col gap-1">
-            <span className="text-sm font-medium leading-snug">
+            <span className="text-sm leading-snug font-medium">
               {post.title}
             </span>
             <span
@@ -212,9 +212,7 @@ function BlogCard({ scale }: { scale: ColorScale }) {
 function StatsCard({ scale }: { scale: ColorScale }) {
   return (
     <div className="flex flex-col rounded-xl border bg-card p-6">
-      <span className="text-sm font-medium text-muted-foreground">
-        Income
-      </span>
+      <span className="text-sm font-medium text-muted-foreground">Income</span>
       <span className="mt-1 text-2xl font-bold">$15,989</span>
       <span className="mt-1 text-xs text-muted-foreground">
         $18,871 last period
