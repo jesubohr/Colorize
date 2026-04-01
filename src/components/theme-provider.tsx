@@ -96,7 +96,6 @@ export function ThemeProvider({
   const setTheme = React.useCallback(
     (nextTheme: Theme) => {
       const isAppearanceTransition =
-        // @ts-expect-error - document.startViewTransition is not yet in the official TS types
         document.startViewTransition !== undefined &&
         !window.matchMedia("(prefers-reduced-motion: reduce)").matches
 
@@ -104,8 +103,6 @@ export function ThemeProvider({
         localStorage.setItem(storageKey, nextTheme)
         setThemeState(nextTheme)
       }
-
-      // @ts-expect-error - document.startViewTransition is not yet in the official TS types
       document.startViewTransition(async () => {
         localStorage.setItem(storageKey, nextTheme)
         setThemeState(nextTheme)
