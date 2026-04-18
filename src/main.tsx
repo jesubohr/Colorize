@@ -9,7 +9,7 @@ import { Toaster } from "@/components/ui/sonner.tsx"
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ThemeProvider>
+    <ThemeProvider storageKey="colorize-theme">
       <TooltipProvider>
         <App />
         <Toaster position="top-center" />

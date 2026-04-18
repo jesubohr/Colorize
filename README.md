@@ -1,21 +1,45 @@
-# React + TypeScript + Vite + shadcn/ui
+# Colorize
 
-This is a template for a new Vite project with React, TypeScript, and shadcn/ui.
+Color palette generator based on Tailwind colors using OKLCH. Pick any color, get a full 50–950 shade range, copy it straight into your config.
 
-## Adding components
+## What it does
 
-To add components to your app, run the following command:
+- Generates 11 shades (50–950) from any input color
+- Uses OKLCH color space for perceptually uniform lightness scaling
+- Auto-detects closest color name from input
+- Spacebar shortcut to randomize
+- Light/dark mode with system preference detection
+
+## Export formats
+
+| Format | Output |
+|---|---|
+| Tailwind 3 | JS config object |
+| Tailwind 4 | `@theme` CSS block |
+| CSS | `:root` custom properties |
+| SCSS | Sass variables |
+| SVG | Color swatch strip |
+| Tokens Studio | Figma plugin JSON |
+| W3C Design Tokens | W3C format JSON |
+
+Color values exportable as: Hex, OKLCH, HSL, RGB.
+
+## Stack
+
+- React 19 + TypeScript + Vite
+- Tailwind CSS v4
+- shadcn/ui + Radix UI
+- [culori](https://culorijs.org) — OKLCH math and color conversion
+
+## Dev
 
 ```bash
-npx shadcn@latest add button
+pnpm install
+pnpm dev
 ```
 
-This will place the ui components in the `src/components` directory.
+## Adding shadcn components
 
-## Using components
-
-To use the components in your app, import them as follows:
-
-```tsx
-import { Button } from "@/components/ui/button"
+```bash
+pnpm dlx shadcn@latest add button
 ```
